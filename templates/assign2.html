@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #008CBA;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input[type=reset] {
+  background-color: #008CBA;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  background: #ffffff url("https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fpng.pngtree.com%2Felement_our%2F20190528%2Fourmid%2Fpngtree-notepad-cartoon-icon-image_1174240.jpg&imgrefurl=https%3A%2F%2Fpngtree.com%2Ffree-png-vectors%2Fnotepad-cartoon&tbnid=RAN_UY4k7-tbnM&vet=12ahUKEwjBxdaY9bHuAhVUA7cAHbRQBRcQMygpegUIARCtAg..i&docid=DRl1B4vfxAE2wM&w=360&h=437&q=cartoon%20image%20of%20notepad&ved=2ahUKEwjBxdaY9bHuAhVUA7cAHbRQBRcQMygpegUIARCtAg") no-repeat right top;
+  margin-right: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+body {
+  background-color: lightblue;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Fill up the following fields</h2>
+
+<div class="container">
+  <form action="/analyse" method="post">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Book Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Book name" name="Bookname" placeholder="Your favourite book name..">
+    </div>
+  </div>
+    <div class="row">
+    <div class="col-25">
+      <label for="subject">Text</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write somwthing about book .." style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+    <input type="reset" value="reset">
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
